@@ -193,6 +193,79 @@ ul, ol {
   padding-top: 100px;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 100px 0;
+  overflow-y: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal.open {
+  opacity: 1;
+}
+
+.modal__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 50px;
+  background: #CC0000;
+  position: relative;
+}
+
+.modal__close {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: 0;
+}
+
+.modal__close::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal__close::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1103,7 +1176,29 @@ ul, ol {
   display: none;
 }
 
+@media screen and (max-width: 1340px) {
+  .main {
+    overflow: hidden;
+  }
+}
 @media screen and (max-width: 1024px) {
+  .container {
+    max-width: 700px;
+  }
+  .modal {
+    padding: 100px 15px;
+  }
+  .modal .btn3 {
+    width: 100%;
+  }
+  .modal__block {
+    padding: 70px 20px;
+    padding-bottom: 30px;
+  }
+  .modal__close {
+    top: 10px;
+    right: 10px;
+  }
   .header__burgir {
     width: 24px;
     height: 24px;
@@ -1154,7 +1249,6 @@ ul, ol {
             transform: translateY(-7px) rotate(-45deg);
   }
   .main {
-    overflow: hidden;
     padding-top: 80px;
   }
   section {
@@ -1365,7 +1459,8 @@ ul, ol {
     margin-bottom: 10px;
   }
   .company__wrap {
-    margin-bottom: 40px;
+    max-width: 100%;
+    margin-bottom: 0px;
   }
   .company__wrap blockquote {
     padding: 10px 10px 10px 30px;
@@ -1377,7 +1472,7 @@ ul, ol {
   }
   .company__img {
     width: 100%;
-    height: 200px;
+    height: auto;
     position: relative;
     z-index: 2;
   }
@@ -1455,7 +1550,7 @@ ul, ol {
     margin: 0;
   }
   .supply__block img {
-    width: 70%;
+    width: 30%;
     height: auto;
   }
   .lines-3 {
@@ -1506,6 +1601,7 @@ ul, ol {
     padding-bottom: 30px;
   }
   .contacts .container h2 {
+    max-width: 100%;
     width: 100%;
   }
   .contacts__wrap {
@@ -1591,5 +1687,20 @@ ul, ol {
   .btn3 {
     font-size: 13px;
     line-height: 17px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .supply__block img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .supply__block img {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .supply__block img {
+    width: 70%;
   }
 }

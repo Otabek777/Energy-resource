@@ -64,6 +64,34 @@
             </div>
         </div>
     </header>
+    <!-- modal -->
+    <div class="modal">
+        <div class="modal__block">
+            <button class="modal__close"></button>
+            <div class="request__form">
+                <form action="">
+                    <div class="box">
+                        <div class="request__input">
+                            <input type="text" placeholder="Ваше имя">
+                        </div>
+                        <div class="request__input">
+                            <input type="text" placeholder="Телефон">
+                        </div>
+                        <textarea class="request__textarea" placeholder="Комментарий"></textarea>
+                        <div class="request__file">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.96667 7.57778L5.65278 8.89167L10.9695 14.2083L16.3472 8.83056L15.0333 7.51667L11.9167 10.6333V0H10.0833V10.6944L6.96667 7.57778ZM21.45 20.6583C21.8167 20.2916 22 19.8638 22 19.3749V10.4833H20.1667V19.3749H1.83333L1.83333 10.4833H0V19.3749C0 19.8638 0.183333 20.2916 0.55 20.6583C0.916667 21.0249 1.34444 21.2083 1.83333 21.2083H20.1667C20.6556 21.2083 21.0833 21.0249 21.45 20.6583Z" fill="#F7F7F7"/>
+                            </svg>
+                            Прикрепить файл
+                            <input type="file">
+                        </div>
+                        <button class="btn3">ОСТАВИТЬ ЗАЯВКУ</button>
+                    </div>
+                </form>
+                <span>Нажимая на кнопку вы даете согласие на обработку персональных данных</span>
+            </div>
+        </div>
+    </div>
     <main class="main">
         <section class="banner">
             <div class="container">
@@ -72,7 +100,7 @@
                         партнер</h1>
                     <p>В области комплексных решений по <span>АСУ ТП</span>
                         и электроприводной технике</p>
-                    <button class="btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                    <button class="btn modal-open">ОСТАВИТЬ ЗАЯВКУ</button>
                 </div>
             </div>
         </section>
