@@ -307,10 +307,12 @@ ul, ol {
     color: #CC0000;
 }
 .header__call, .footer__call {
+    background: transparent;
     font-weight: 400;
     font-size: 15px;
     line-height: 19px;
     color: #CC0000;
+    border: 0;
     border-bottom: 1px dashed #CC0000;
 }
 .header__soc, .footer__soc {
